@@ -1,0 +1,98 @@
+{% extends 'master.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container-info">
+    <div class="row">
+
+        <div class="col-md-3"></div>
+        <div class="col-md-6  box1">
+            <h2 class="text-center text-capitalize">Signup form </h2>
+            <form action="" method="post">
+              {% csrf_token %}
+           
+
+                <div class="form-row mt-4 ">
+                  <div class="form-group col-md-12 ">
+                      <div class="row">
+                      <div class="col-md-3">
+                    <label for="">firstname*:</label>
+                      </div>
+
+                      <div class="col-md-8">
+                        <span id="fname_span"></span>
+                    <input type="text" class="form-control d-flex content-justify-center" id="fname" name="fname" required>
+                      </div>
+                      </div>
+                  </div>
+                   <div class="form-group col-md-12 ">
+                    <div class="row">
+                    <div class="col-md-3">
+                  <label for="">username:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <span id="user_span"></span>
+                  <input type="text" class="form-control" id="username"name='user_name' onkeyup="username_check()" required>
+                    </div>
+                    </div>
+                </div> 
+                <div class="form-group col-md-12 ">
+                    <div class="row">
+                    <div class="col-md-3">
+                  <label for="">Email*:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <span id="email_span"></span>
+                  <input type="text" class="form-control" id="email" name="email" onkeyup="email_check()" required>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 ">
+                    <div class="row">
+                    <div class="col-md-3">
+                  <label for="">Mobile*:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <span id="ph_span"></span>
+                  <input type="text" class="form-control" id="phone" name="phone"onkeyup="phone_check()" required>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 ">
+                    <div class="row">
+                    <div class="col-md-3">
+                  <label for="">password*:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <span id="passwordsp1"></span>
+                  <input type="password" class="form-control" id="password1" name="password1" required>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 ">
+                     <div class="row">
+                    <div class="col-md-3">
+                  <label for="">conform password*:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <span id="passwordsp2"></span>
+                  <input type="password" class="form-control" id="password2" name="password2" required>
+                    </div>
+                    </div>
+                </div>  
+
+                
+                 
+                  
+             
+              
+                
+               <div class="col-md-5"></div>
+             <div class="col-md-4 mt-2 p-4">
+            <button type="submit" class="btn btn-primary btn-lg" onclick="return validate()" id="submit_button">Submit</button>
+             </div>
+              </form>
+        </div>
+    </div>
+    </div>
+  {% endblock %}
